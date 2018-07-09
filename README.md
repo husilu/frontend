@@ -1,30 +1,28 @@
-# frontend
-前端面试
-前端面试
+# 前端面试
 
-<font color='red'>Es基础知识点</font>
+## <font color='red'>Es基础知识点</font>
 
-值类型VS引用类型
+### 值类型VS引用类型
 
 值类型：Boolean、String、Number、undefined、Null。按照值传递。（复制一份存入栈内存）
 
 引用类型：Object类的所有。按照共享传递，指向同一个内存地址。
 
-原型和原型链
+### 原型和原型链
 
 1：所有的引用类型（数组，对象，函数）都具有对象特征，即可自由扩展属性。（null除外）
 
-2：所有的引用类型（数组，对象，函数）都有一个proto属性，属性值是一个普通的对象，也就是其构造函数的prototype
+2：所有的引用类型（数组，对象，函数）都有一个__proto__属性，属性值是一个普通的对象，也就是其构造函数的prototype
 
 3：所有的引用类型（数组，对象，函数）都有一个prototype属性，属性值是一个普通的对象。
 
-原型
+### 原型
 
-如果一个对象的某个属性不存在的时候就会去它的proto中找，即它的构造函数的prototype中寻找。
+如果一个对象的某个属性不存在的时候就会去它的__proto__中找，即它的构造函数的prototype中寻找。
 
 hasOwnProperty判断这个属性是不是对象本身的属性。
 
-执行上下文
+### 执行上下文
 
 先把代码中 即将执行的变量，函数声明都拿出来，变量先暂时赋值为undefined。var 关键字表示存入执行上下文。
 
@@ -40,7 +38,7 @@ this执行分为4种：
 
 4：用于call，apply，bind
 
-闭包
+### 闭包
 
 依据的是函数定义时的作用域链，而不是函数执行时。
 
@@ -50,7 +48,7 @@ this执行分为4种：
 
 函数作为参数传递。
 
-异步
+### 异步
 
 异步是什么？即不会阻塞后面程序的运行。
 
@@ -62,13 +60,13 @@ this执行分为4种：
 
 2：网络请求 如 ajax <img> 加载
 
-module（ES6模块化的使用）
+### module（ES6模块化的使用）
 
 在一个文件或者模块中，export，import可以有多个，export default 仅有一个。
 
 通过export导出时，在导入的时候要加{}.export default就不用。
 
-Class
+### Class
 
 取代之前构造函数初始化对象的形式。
 
@@ -94,7 +92,7 @@ super(x,y)//调用父类的constructor(x, y)
 
 this.name=name}}
 
-ES6中新增的数据类型
+### ES6中新增的数据类型
 
 set(类似数组.不会有重复的)和map(类似对象)
 
@@ -142,7 +140,7 @@ Map实例的遍历方法：
 
 keys(),values().entries()
 
-Promise
+### Promise
 
 3-2-1.
 
@@ -154,9 +152,9 @@ Promise
 
 方法：then()
 
-<font color="red">Web Api</font>
+## <font color="red">Web Api</font>
 
-Bom
+### Bom
 
 1:navigator  navigator.userAgent 查询浏览器是什么浏览器
 
@@ -166,7 +164,7 @@ Bom
 
 4:history
 
-Dom
+## Dom
 
 获取父元素 parentElement
 
@@ -176,13 +174,13 @@ Dom
 
 阻止事件冒泡 e.stopPropagation()
 
-事件代理：
+### 事件代理：
 
 类似于要使用jq的事件绑定要使用on来绑定，来给页面生成之后动态生成的某个元素添加事件。
 
 （我是这么理解的，原来小册不是这么写的，它写了具体的实现方法）
 
-Ajax
+### Ajax
 
 var xhr =new  XMLHttpRequest();
 
@@ -192,7 +190,7 @@ if(xhr.readyState==4){
 
 if(xhr.status==200){
 
-	xhr.responseText()
+​	xhr.responseText()
 
 }}
 
@@ -202,7 +200,7 @@ xhr.open('method','url',false)
 
 xhr.send(null)
 
-Fetch Api
+###  Fetch Api
 
 fetch('url'{
 
@@ -216,7 +214,7 @@ mode:'',
 
 ...}).then(function())
 
-跨域
+### 跨域
 
 协议，域名，端口。
 
@@ -224,7 +222,7 @@ script.img.link这三个标签不受同源策略影响。
 
 解决跨域1: JSNOP,2:服务器端配置http header
 
-存储
+### 存储
 
 cookie 服务器和客户端进行信息传递。但是cookie也具备浏览器端存储的能力。
 
@@ -238,9 +236,9 @@ LocalStorage和sessionStorage
 
 Http请求不会带。存储量5MB。LocalStorage永久，sessionStorage有时间限制。
 
-<font color="red">CSS</font>
+# <font color="red">CSS</font>
 
-清除浮动
+### 清除浮动
 
 .clearfix:after{
 
@@ -252,21 +250,21 @@ clear:both;
 
 }
 
-盒子模型
+### 盒子模型
 
 border-box   css中设置的宽度就是 内容宽度+padding+border 
 
 content-box css中设置的宽度就是  内容宽度
 
-flex布局
+### flex布局 
 
 flex:2的宽度为flex:1的二倍。
 
-垂直水平居中
+### 垂直水平居中	
 
 absolute+transtion:transform(-50%,-50%)
 
-css3动画
+### css3动画
 
 1:@keyframes定义一个动画
 
@@ -286,7 +284,7 @@ css3动画
 
  }
 
-针对一个 CSS 选择器来设置动画，例如针对div元素设置动画 
+针对一个 CSS 选择器来设置动画，例如针对`div`元素设置动画 
 
 div { width: 100px; 
 
@@ -300,7 +298,7 @@ animation-duration: 5s;
 
 }
 
-重绘和回流
+### 重绘和回流
 
  重绘：指的是当页面中的元素不脱离文档流，而简单地进行样式的变化，比如修改颜色、背景等，浏览器重新绘制样式
 
@@ -308,9 +306,9 @@ animation-duration: 5s;
 
 
 
-<font color="red">浏览器相关知识点</font>
+## <font color="red">浏览器相关知识点</font>
 
-加载页面和渲染过程
+### 加载页面和渲染过程
 
 加载过程：
 
@@ -332,21 +330,21 @@ CSSOM+DOM整合形成RenderTree
 
 解析过程中，如果遇到和<link href="..."> 和 <script src="..."> 这种外链加载 CSS 和 JS 的标签，浏览器会异步下载，下载过程和上文中下载 HTML 的流程一样。只不过，这里下载下来的字符串是 CSS 或者 JS 格式的。 
 
-性能优化
+### 性能优化
 
-优化原则和方向
+### 优化原则和方向
 
-性能优化的原则是以更好的用户体验为标准，具体就是实现下面的目标：
+性能优化的原则是**以更好的用户体验为标准**，具体就是实现下面的目标：
 
 1. 多使用内存、缓存或者其他方法
 2. 减少 CPU 和GPU 计算，更快展现
 
 优化的方向有两个：
 
-- 减少页面体积，提升网络加载
-- 优化页面渲染
+- **减少页面体积，提升网络加载**
+- **优化页面渲染**
 
-减少页面体积，提升网络加载
+### 减少页面体积，提升网络加载
 
 - 静态资源的压缩合并（JS 代码压缩合并、CSS 代码压缩合并、雪碧图）
 - 静态资源缓存（资源名称加 MD5 戳）
