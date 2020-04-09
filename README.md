@@ -4,7 +4,7 @@
 
 ### 值类型VS引用类型
 
-值类型：Boolean、String、Number、undefined、Null。按照值传递。（复制一份存入栈内存）
+值类型：Boolean、String、Number、undefined、Null、symbol。按照值传递。（复制一份存入栈内存）
 
 引用类型：Object类的所有。按照共享传递，指向同一个内存地址。
 
